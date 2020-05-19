@@ -21,6 +21,7 @@ func StringToStringArray(rs string) []string {
 	s := strings.Split(s0, ",")
 	return s
 }
+
 // StringToIntArray : "[1,2,3,4]"
 func StringToIntArray(rs string) []int {
 	if rs == "" {
@@ -29,12 +30,11 @@ func StringToIntArray(rs string) []int {
 	s0 := strings.Trim(rs, "[]")
 	s := strings.Split(s0, ",")
 	var ls []int
-	for _,v:= range s{
-		ls = append(ls,StringToInt(v,0))
+	for _, v := range s {
+		ls = append(ls, StringToInt(v, 0))
 	}
 	return ls
 }
-
 
 // StringToInt :
 func StringToInt(st string, defaultInt int) int {
@@ -60,4 +60,14 @@ func StringToInt64(st string, defaultInt int64) int64 {
 		return defaultInt
 	}
 	return vInt
+}
+
+// Int64ToString :
+func Int64ToString(v int64) string {
+	return fmt.Sprintf("%d", v)
+}
+
+// IntToString :
+func IntToString(v int) string {
+	return fmt.Sprintf("%d", v)
 }

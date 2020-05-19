@@ -42,6 +42,7 @@ func ArrayStringJoin(arr1 []string, arr2 []string) []string {
 	return append(arr1, arr2...)
 }
 
+// NilArrayStringToChange :
 func NilArrayStringToChange(info []string) []string {
 	if info == nil {
 		return make([]string, 0)

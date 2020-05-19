@@ -29,3 +29,11 @@ func TestStringToIntArray(t *testing.T) {
 func TestStringToInt64(t *testing.T) {
 	println(StringToInt64("123", 0))
 }
+
+func TestInt64ToString(t *testing.T) {
+	log.Printf("ls=%+v\n", Int64ToString(123456789012345678))
+}
+
+func TestIntToString(t *testing.T) {
+	log.Printf("ls=%+v\n", Int64ToString(1234))
+}
