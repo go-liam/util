@@ -11,6 +11,8 @@ func TestTimeTimeNowFormat(t *testing.T) {
 	println(v1)
 	v2 := TimeNowFormat("")
 	println(v2)
+	v3 := TimeNowFormat("2006年01月02日 15:04")
+	println(v3)
 }
 
 func TestTimeToday(t *testing.T) {

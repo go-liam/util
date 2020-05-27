@@ -10,7 +10,7 @@ func TimeNowInt64() int64 {
 // TimeNowFormat :
 func TimeNowFormat(format string) string {
 	if format == "" {
-		format = "2006年01月02日 15:04"
+		format = "2006-01-02 15:04:05"
 	}
 	timeLocal, _ := time.LoadLocation("Asia/Chongqing")
 	time.Local = timeLocal
