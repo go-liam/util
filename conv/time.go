@@ -9,8 +9,18 @@ func TimeNowInt64() int64 {
 
 // TimeNowFormat :
 func TimeNowFormat(format string) string {
+	if format == "" {
+		format = "2006年01月02日 15:04"
+	}
 	timeLocal, _ := time.LoadLocation("Asia/Chongqing")
 	time.Local = timeLocal
 	curNow := time.Now().Local()
 	return curNow.Format(format)
+}
+
+// TimeTodayInt64 :
+func TimeTodayInt64() int64 {
+	t := time.Now()
+	zeroTm := time.Date(t.Year(), t.Month(), t.Day(), 0, 0, 0, 0, t.Location()).Unix()
+	return zeroTm
 }

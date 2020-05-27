@@ -37,3 +37,12 @@ func TestInt64ToString(t *testing.T) {
 func TestIntToString(t *testing.T) {
 	log.Printf("ls=%+v\n", Int64ToString(1234))
 }
+
+func TestStringIsEmptyValue(t *testing.T) {
+	println(StringIsEmptyValue("", "xxxxx"))
+}
+
+func TestStringIsEqual(t *testing.T) {
+	println(StringIsEqual("a123", "a123"))
+	println(StringIsEqual("a123", "a12"))
+}

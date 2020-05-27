@@ -71,3 +71,19 @@ func Int64ToString(v int64) string {
 func IntToString(v int) string {
 	return fmt.Sprintf("%d", v)
 }
+
+// StringIsEqual ：
+func StringIsEqual(str string, equal string) bool {
+	if str == equal {
+		return true
+	}
+	return false
+}
+
+// StringIsEmptyValue :
+func StringIsEmptyValue(str string, emptyValue string) string {
+	if str == "" {
+		return emptyValue
+	}
+	return str
+}

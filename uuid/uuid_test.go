@@ -9,3 +9,7 @@ func TestAutoInt64ID(t *testing.T) {
 func TestAutoUInt64ID(t *testing.T) {
 	println(AutoUInt64ID())
 }
+
+func TestUUID(t *testing.T) {
+	println(UUID())
+}
