@@ -28,3 +28,10 @@ func JsonStringToStruct(jsonSt string, obj interface{}) {
 		log.Println("[ERROR]", errs.Error())
 	}
 }
+
+// StringToInterface :
+func StringToInterface(st string) interface{} {
+	var obj interface{}
+	JsonStringToStruct(st, &obj)
+	return obj
+}
