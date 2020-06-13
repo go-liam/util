@@ -30,3 +30,10 @@ func APIResponseData(code int, message string, data interface{}) *APIResponse {
 	}
 	return res
 }
+
+// Pagination :分页属性
+type Pagination struct {
+	Total    int `json:"total"`
+	Current  int `json:"current"`
+	PageSize int `json:"pageSize"`
+}
