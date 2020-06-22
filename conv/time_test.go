@@ -18,3 +18,13 @@ func TestTimeTimeNowFormat(t *testing.T) {
 func TestTimeToday(t *testing.T) {
 	println("v=", TimeTodayInt64())
 }
+
+// 1592755200
+func TestTimesTampToday(t *testing.T) {
+	println(TimesTampToday())
+}
+
+// 1592841600
+func TestTimesTampTomorrow(t *testing.T) {
+	println(TimesTampTomorrow())
+}
