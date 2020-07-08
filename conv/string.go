@@ -87,3 +87,11 @@ func StringIsEmptyValue(str string, emptyValue string) string {
 	}
 	return str
 }
+
+// StringLeft :
+func StringLeft(str string, num int) string {
+	if len(str) < num {
+		return str
+	}
+	return string([]rune(str)[:num])
+}

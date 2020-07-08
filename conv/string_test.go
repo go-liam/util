@@ -46,3 +46,9 @@ func TestStringIsEqual(t *testing.T) {
 	println(StringIsEqual("a123", "a123"))
 	println(StringIsEqual("a123", "a12"))
 }
+
+func TestString_StringLeft(t *testing.T) {
+	println(StringLeft("12345aSdFg", 100))
+	println(StringLeft("一二三四五12345a2sDfg", 7))
+	println(StringLeft("一1二2三3", 7))
+}
