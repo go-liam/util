@@ -72,3 +72,8 @@ func TestArrayStringContains2(t *testing.T) {
 	println("v1= ", ArrayStringContains(nil, "key"))
 	println("v2= ", ArrayStringContains([]string{"key", "xxx"}, "key"))
 }
+
+func Test1(t *testing.T) {
+	v := RemoveDuplicateArray([]int{1, 2, 3, 4, 1, 2, 3})
+	log.Printf("v=%+v\n", v)
+}
