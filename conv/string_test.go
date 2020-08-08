@@ -25,7 +25,11 @@ func TestStringToIntArray(t *testing.T) {
 	ls := StringToIntArray("[1,2,3,4]")
 	log.Printf("ls=%+v\n", ls)
 }
-
+func TestStringToInt64Array(t *testing.T) {
+	ls := StringToInt64Array("[1,2,3,4]")
+	log.Printf("ls=%+v\n", ls)
+	//ls=[1 2 3 4]
+}
 func TestStringToInt64(t *testing.T) {
 	println(StringToInt64("123", 0))
 }

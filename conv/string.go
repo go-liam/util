@@ -36,6 +36,20 @@ func StringToIntArray(rs string) []int {
 	return ls
 }
 
+// StringToInt64Array : "[1,2,3,4]"
+func StringToInt64Array(rs string) []int64 {
+	if rs == "" {
+		return []int64{}
+	}
+	s0 := strings.Trim(rs, "[]")
+	s := strings.Split(s0, ",")
+	var ls []int64
+	for _, v := range s {
+		ls = append(ls, StringToInt64(v, 0))
+	}
+	return ls
+}
+
 // StringToInt :
 func StringToInt(st string, defaultInt int) int {
 	if st == "" {
