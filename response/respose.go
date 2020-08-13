@@ -37,3 +37,10 @@ type Pagination struct {
 	Current  int `json:"current"`
 	PageSize int `json:"pageSize"`
 }
+
+// ListParameter: 列表参数
+type ListParameter struct {
+	OrderSt string
+	WhereSt string
+	Type    int // 0 mysql
+}
