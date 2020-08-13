@@ -14,7 +14,7 @@ const (
 
 var Server *JWT
 
-func init()  {
+func init() {
 	Server = NewJWT("")
 }
 
@@ -85,9 +85,9 @@ func (j *JWT) ParseToken(tokenString string) (*CustomClaims, error) {
 // RefreshToken 更新token,认加 x 分钟
 func (j *JWT) RefreshToken(tokenString string, second int) (string, error) {
 	info, err2 := j.ParseToken(tokenString)
-	if err2 != nil{
-		return "",err2
+	if err2 != nil {
+		return "", err2
 	}
-	info.ExpiresAt =  time.Now().Add(time.Second  * time.Duration(second)).Unix()
+	info.ExpiresAt = time.Now().Add(time.Second * time.Duration(second)).Unix()
 	return j.CreateToken(info)
 }
