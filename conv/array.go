@@ -97,3 +97,12 @@ func RemoveDuplicateArray(slc []int) []int {
 	}
 	return result
 }
+
+// ArrayStringToInt64 :string Array 转为 int64 array: ["1","2"]->[1,2]
+func ArrayStringToInt64(ls []string) []int64 {
+	o := make([]int64, 0)
+	for _, v := range ls {
+		o = append(o, StringToInt64(v, 0))
+	}
+	return o
+}
