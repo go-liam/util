@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func TestFilter1(t *testing.T) {
+func TestFilter_false(t *testing.T) {
 	word := "xxx非常好11-ddd棒极了22ddd-值得拥有333 -ee棒极了22-棒极了22- 非常好11 - 非常好11-值得拥有33-"
 	ls := make([]*Model, 0)
 	ls = append(ls, &Model{Word: "非常好"})
@@ -18,7 +18,7 @@ func TestFilter1(t *testing.T) {
 	assert.Equal(t, false, f)
 }
 
-func TestFilter2(t *testing.T) {
+func TestFilter_true(t *testing.T) {
 	word := "xxx非常好11-ddd棒极了22ddd-值得拥有333 -ee棒极了22-棒极了22- 非常好11 - 非常好11-值得拥有33-"
 	ls := make([]*Model, 0)
 	ls = append(ls, &Model{Word: "非常好A"})
