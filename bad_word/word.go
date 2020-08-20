@@ -12,15 +12,15 @@ const (
 	DefaultReplace = "**"
 )
 
-func Filter(word string,ls []*Model, replaceSt string) (bool,string) {
+func Filter(word string, ls []*Model, replaceSt string) (bool, string) {
 	back := word
-	for _,v:= range ls{
-		back = strings.ReplaceAll(back, v.Word, replaceSt )
+	for _, v := range ls {
+		back = strings.ReplaceAll(back, v.Word, replaceSt)
 	}
-	println("word:",word)
-	println("back:",back)
+	println("word:", word)
+	println("back:", back)
 	if word != back {
-		return false,back
+		return false, back
 	}
-	return true,back
+	return true, back
 }
