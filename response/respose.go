@@ -38,8 +38,15 @@ type Pagination struct {
 	PageSize int `json:"pageSize"`
 }
 
-// ListParameter: 列表参数
+// ListParameter : 列表参数(作废)
 type ListParameter struct {
+	OrderSt string
+	WhereSt string
+	Type    int // 0 mysql
+}
+
+// PageParameter :
+type PageParameter struct {
 	OrderSt string
 	WhereSt string
 	Type    int // 0 mysql
