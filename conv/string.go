@@ -109,3 +109,15 @@ func StringLeft(str string, num int) string {
 	}
 	return string([]rune(str)[:num])
 }
+
+// Int64StringToArrayString [1,2] --> ["1","2"]
+func Int64StringToArrayString(st string) []string {
+	ar := StringToInt64Array(st)
+	return ArrayInt64ToString(ar)
+}
+
+// ArrayStringToInt64String ["1","2"] --> [1,2]
+func ArrayStringToInt64String(st []string) string {
+	ar := ArrayStringToInt64(st)
+	return StructToJsonString(ar)
+}

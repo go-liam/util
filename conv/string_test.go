@@ -57,3 +57,16 @@ func TestString_StringLeft(t *testing.T) {
 	println(StringLeft("一二三四五12345a2sDfg", 7))
 	println(StringLeft("一1二2三3", 7))
 }
+
+func TestInt64StringToArrayString(t *testing.T) {
+	v := Int64StringToArrayString("[1,2,3]")
+	log.Printf("v=%+v\n", v)
+	//v=[1 2 3]
+}
+
+func TestArrayStringToInt64String(t *testing.T) {
+	v := ArrayStringToInt64String([]string{"1", "2"})
+	println("v=%+v\n", v)
+	// v=[1,2]
+
+}
