@@ -83,3 +83,9 @@ func TestStringArrayToInt64(t *testing.T) {
 	log.Printf("v=%+v\n", v)
 	// v=[1 2]
 }
+
+func TestArrayInt64ToString(t *testing.T) {
+	v := ArrayInt64ToString([]int64{1, 2, 3})
+	log.Printf("v=%+v\n", v)
+	// v=[1 2 3]
+}

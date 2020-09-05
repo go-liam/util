@@ -6,13 +6,13 @@ import (
 	"strings"
 )
 
-// StringArrayToString :
+// StringArrayToString : [a,b,c] -> "[a,b,c]"
 func StringArrayToString(rs interface{}) string {
 	v := fmt.Sprintf("%v", rs)
 	return strings.Trim(strings.Replace(v, " ", ",", -1), "")
 }
 
-// StringToStringArray : [a,b,c]
+// StringToStringArray : "[a,b,c]" -> [a b c]
 func StringToStringArray(rs string) []string {
 	if rs == "" {
 		return []string{}
@@ -22,7 +22,7 @@ func StringToStringArray(rs string) []string {
 	return s
 }
 
-// StringToIntArray : "[1,2,3,4]"
+// StringToIntArray : "[1,2,3,4]"-> [1,2,3,4]
 func StringToIntArray(rs string) []int {
 	if rs == "" {
 		return []int{}
@@ -36,7 +36,7 @@ func StringToIntArray(rs string) []int {
 	return ls
 }
 
-// StringToInt64Array : "[1,2,3,4]"
+// StringToInt64Array : "[1,2,3,4]"->[1,2,3,4]
 func StringToInt64Array(rs string) []int64 {
 	if rs == "" {
 		return []int64{}
@@ -50,7 +50,7 @@ func StringToInt64Array(rs string) []int64 {
 	return ls
 }
 
-// StringToInt :
+// StringToInt : "123"->123
 func StringToInt(st string, defaultInt int) int {
 	if st == "" {
 		return defaultInt
@@ -63,7 +63,7 @@ func StringToInt(st string, defaultInt int) int {
 	return vInt
 }
 
-// StringToInt64 :
+// StringToInt64 :"123"->123
 func StringToInt64(st string, defaultInt int64) int64 {
 	if st == "" {
 		return defaultInt
@@ -76,7 +76,7 @@ func StringToInt64(st string, defaultInt int64) int64 {
 	return vInt
 }
 
-// Int64ToString :
+// Int64ToString :123 ->"123"
 func Int64ToString(v int64) string {
 	return fmt.Sprintf("%d", v)
 }

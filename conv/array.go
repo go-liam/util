@@ -106,3 +106,12 @@ func ArrayStringToInt64(ls []string) []int64 {
 	}
 	return o
 }
+
+// ArrayInt64ToString :int64 array 转为 string Array [1,2] -> ["1","2"]
+func ArrayInt64ToString(ls []int64) []string {
+	o := make([]string, 0)
+	for _, v := range ls {
+		o = append(o, fmt.Sprintf("%d", v))
+	}
+	return o
+}
