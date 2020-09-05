@@ -89,3 +89,9 @@ func TestArrayInt64ToString(t *testing.T) {
 	log.Printf("v=%+v\n", v)
 	// v=[1 2 3]
 }
+
+func TestRemoveDuplicateArrayInt64(t *testing.T) {
+	v1 := RemoveDuplicateArrayInt64([]int64{1, 2, 2, 3, 3, 1})
+	log.Printf("v=%+v\n", v1)
+	//v=[1 2 3]
+}
