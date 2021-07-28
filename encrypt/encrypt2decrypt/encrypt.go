@@ -23,13 +23,12 @@ import (
 	fmt.Println("Decrypted:", strDecrypted)
 */
 
+const defaultKey = "9fa6c8e0"
 
-
-const defaultKey  =  "9fa6c8e0"
 //var key = []byte(defaultKey)
 
-func DecryptedID(st string,key string) string {
-	if key ==""{
+func DecryptedID(st string, key string) string {
+	if key == "" {
 		key = defaultKey
 	}
 	key1 := []byte(key)
@@ -40,8 +39,8 @@ func DecryptedID(st string,key string) string {
 	return strDecrypted
 }
 
-func EncryptedID(id int64,key string) string {
-	if key ==""{
+func EncryptedID(id int64, key string) string {
+	if key == "" {
 		key = defaultKey
 	}
 	key1 := []byte(key)

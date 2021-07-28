@@ -17,3 +17,7 @@ go test -coverpkg=./... -coverprofile=coverage.data ./...
 ```shell
 go get github.com/go-liam/util
 ```
+
+## 兼容
+
+ go1.16

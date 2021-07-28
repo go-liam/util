@@ -7,14 +7,14 @@ import (
 )
 
 func TestEncryptedID(t *testing.T) {
-	st := EncryptedID(1234567890,"")
+	st := EncryptedID(1234567890, "")
 	log.Printf("id= %s", st)
 	//assert.NotNil(t, err)
 	assert.Equal(t, st, "45bce62b71d42784ec39f07d13b8fe35")
 }
 
 func TestDecryptedID(t *testing.T) {
-	st := DecryptedID("45bce62b71d42784ec39f07d13b8fe35","")
+	st := DecryptedID("45bce62b71d42784ec39f07d13b8fe35", "")
 	log.Printf("id= %s", st)
 	//assert.NotNil(t, err)
 	assert.Equal(t, st, "1234567890")
