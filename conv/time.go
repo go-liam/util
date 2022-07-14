@@ -46,3 +46,21 @@ func TimesTampTomorrow() int64 {
 	zeroTm := time.Date(t2.Year(), t2.Month(), t2.Day(), 0, 0, 0, 0, t.Location()).Unix()
 	return zeroTm
 }
+
+func DateAddDay(ts string, day int) string {
+	date, err := time.Parse("2006-01-02", ts)
+	if err != nil {
+		return ""
+	}
+	n := time.Hour * 24 * time.Duration(day)
+	d1 := date.Add(n)
+	return d1.Format("2006-01-02")
+}
+
+func DateSubByDay(start string, stop string) int {
+	a, _ := time.Parse("2006-01-02", start)
+	b, _ := time.Parse("2006-01-02", stop)
+	d := b.Sub(a)
+	day := d.Hours() / 24
+	return InterfaceToInt(day, 0)
+}
